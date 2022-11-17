@@ -1,0 +1,34 @@
+.ContainerButton {
+    max-width: none !important;
+    padding-left: none !important;
+    padding-right: none !important;
+    width: 20% !important;
+
+}
+
+.ButtonReservar {
+    box-shadow: -9px -60px 107px -76px rgba(128,128,128,0.32) inset;
+    -webkit-box-shadow: -9px -60px 107px -76px rgba(128,128,128,0.32) inset;
+    -moz-box-shadow: -9px -60px 107px -76px rgba(128,128,128,0.32) inset;
+    background-color: #FFFF !important;
+    border-radius: 20px !important;
+    padding: 10px 10px !important;
+    font-weight: 700 !important;
+    color:  #62CCC5 !important;
+}
+.ButtonReservar:hover{
+    box-shadow: -9px -60px 107px -76px rgba(128,128,128,0.32) inset;
+    -webkit-box-shadow: -9px -60px 107px -76px rgba(128,128,128,0.32) inset;
+    -moz-box-shadow: -9px -60px 107px -76px rgba(128,128,128,0.32) inset;
+    background-color: #FFFF !important;
+    border-radius: 20px !important;
+    padding: 10px 10px !important;
+    font-weight: 700 !important;
+    color:  #62CCC5 !important;
+}
+.ButtonReservar span{
+    border: none !important;
+}
+.ToolBar{
+    min-height: 85px !important;
+}
