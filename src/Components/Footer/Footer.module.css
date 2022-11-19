@@ -1,0 +1,46 @@
+.container{
+    display: flex;
+    width: 100%;
+    height: 200px;
+    bottom: 0;
+    justify-content: space-around;
+    align-items: center;
+    background-color: white;
+    position: absolute;
+    
+}
+.container p{
+    color: black;
+    padding-top: 10px;
+}
+.nosotros h3{
+    color: #34CDC3;
+}
+.nosotros p{
+    color: black;
+}
+.servicios h3{
+    color: #34CDC3;
+}
+.servicios p{
+    color: black;
+}
+.datos{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-content: center;
+    
+}
+.contacto h3{
+ color: #34CDC3;
+}
+.contacto p {
+    color: black;
+}
+.transparente{
+    color: transparent !important;
+}
+
+/* Hacer responsive de datos */
