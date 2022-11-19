@@ -1,0 +1,4 @@
+const imagenes = ["https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_540,c_limit/31662790-556d-45a0-8721-4b967ad90524/nike-snkrs-calendario-de-fechas-de-lanzamientos.png", "https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_540,c_limit/dc0d8060-336f-4a57-b2e0-0f4ac1e99861/nike-snkrs-calendario-de-fechas-de-lanzamientos.png", "https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_540,c_limit/9100d258-5595-4d5c-adb2-7539f0ba16e0/nike-snkrs-calendario-de-fechas-de-lanzamientos.png", "https://static.nike.com/a/images/f_auto/dpr_2.0,cs_srgb/h_540,c_limit/f9b0c6e1-834c-4af5-9c61-90fe4f31baa1/nike-snkrs-calendario-de-fechas-de-lanzamientos.png"]
+
+
+export default imagenes

@@ -5,6 +5,7 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import Navbar from './Components/NavBar/Navbar.jsx'
 import Footer from './Components/Footer/Footer.jsx'
+import Slider from './Components/Slider/SliderPrueba';
 function App() {
 
   return (
@@ -13,7 +14,7 @@ function App() {
                 <Navbar />
         <Routes>
         <Route path="/" exact element={<Footer />} />
-
+        <Route path='/slider' exact element={<Slider/>}/>
         </Routes>
       </Router>
   )

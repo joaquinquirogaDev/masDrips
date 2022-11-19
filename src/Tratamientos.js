@@ -19,6 +19,24 @@ const Tratamientos = [
         precio: "$450",
         descripcion: "Reposición liquida endovenosa con vitaminas que producen energía"
     },
+    {
+        id: 3,
+        Titulo: "Energy",
+        precio: "$450",
+        descripcion: "Reposición liquida endovenosa con vitaminas que producen energía"
+    },
+    {
+        id: 3,
+        Titulo: "Energy",
+        precio: "$450",
+        descripcion: "Reposición liquida endovenosa con vitaminas que producen energía"
+    },
+    {
+        id: 3,
+        Titulo: "Energy",
+        precio: "$450",
+        descripcion: "Reposición liquida endovenosa con vitaminas que producen energía"
+    },
 
 ]
 
