@@ -16,6 +16,7 @@ function App() {
         <Route path="/" exact element={<Footer />} />
         <Route path='/slider' exact element={<Slider/>}/>
         </Routes>
+        
       </Router>
   )
 }
