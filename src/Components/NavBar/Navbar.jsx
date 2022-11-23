@@ -17,11 +17,21 @@ import Typography from '@mui/material/Typography';
 import Button from '@mui/material/Button';
 import LogoDrips from '../Imagenes/logo.png'
 import Avatar from '@mui/material/Avatar';
+import MenuTop from '../MenuTop/MenuTop';
+import SwipeableDrawer from '@mui/material/SwipeableDrawer';
+import HighlightOffSharpIcon from '@mui/icons-material/HighlightOffSharp';
 
 const drawerWidth = 240;
 const navItems = ['Tratamientos', 'Sobre Nosotros', 'FAQs', 'Área de cobertura'];
 
 const Navbar = (props) => {
+    const [state, setState] = useState(false);
+    const toggleDrawer = () => {
+        setState(true);
+    };
+    const toggleDrawerClose = () => {
+        setState(false);
+    };
     const { window } = props;
     const [mobileOpen, setMobileOpen] = React.useState(false);
 
@@ -37,8 +47,8 @@ const Navbar = (props) => {
             <Divider />
             <List>
                 {navItems.map((item) => (
-                    <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }}>
+                    <ListItem key={item} disablePadding >
+                        <ListItemButton sx={{ textAlign: 'center' }} >
                             <ListItemText primary={item} />
                         </ListItemButton>
                     </ListItem>
@@ -46,12 +56,13 @@ const Navbar = (props) => {
             </List>
         </Box>
     );
+    const drawerWidth = 1900;
 
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
         <Box sx={{ display: 'flex' }}>
-            <AppBar component="nav" style={{ backgroundColor: '#FFFF', display: 'flex', justifyContent: 'space-between', alignCente: 'center', height: '80px', paddingTop: '5px'}}>
+            <AppBar component="nav" style={{ backgroundColor: '#FFFF', display: 'flex', justifyContent: 'space-between', alignCente: 'center', height: '80px', paddingTop: '5px' }}>
                 <Toolbar >
                     <IconButton
                         color="inherit"
@@ -77,6 +88,7 @@ const Navbar = (props) => {
                     <Box sx={{ width: '80%', display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
                             <Button
+                                onClick={(e) => { item === "Tratamientos" ? toggleDrawer() : "" }}
                                 key={item}
                                 sx={item === "Tratamientos"
                                     ? { color: '#57BAB3', fontWeight: '700' }
@@ -85,13 +97,43 @@ const Navbar = (props) => {
                                 {item}
                             </Button>
                         ))}
+                        <Drawer
+                            sx={{
+
+                                width: drawerWidth,
+                                flexShrink: 0,
+                                '& .MuiDrawer-paper': {
+
+                                    width: drawerWidth,
+                                    color: 'white',
+                                    overflowY: 'auto',
+                                    margin: '0 auto',
+                                    borderRadius: '0 0 5px 5px'
+                                },
+                            }}
+                            anchor='top'
+                            open={state}
+                            onOpen={() => toggleDrawer()}
+                            
+
+                        >
+                            <div className={style.box}>
+                            <div className={style.boxButton}>
+                            <IconButton onClick={toggleDrawerClose} className={style.icon} disableFocusRipple>
+                            <HighlightOffSharpIcon sx={{color: '#73D8D1'}}/>
+                            </IconButton>
+                            </div>
+                                {<MenuTop state={state} toggleDrawer={() => toggleDrawer()} setState={setState} toggleDrawerClose={() => toggleDrawerClose()} />}
+                            </div>
+                        </Drawer>
                     </Box>
+
                     <Container className={style.ContainerButton}>
-                        <Button 
-                        className={style.ButtonReservar} 
-                        sx={{display: { xs: 'none', sm: 'block' } }}
-                        variant="contained"
-                        
+                        <Button
+                            className={style.ButtonReservar}
+                            sx={{ display: { xs: 'none', sm: 'block' } }}
+                            variant="contained"
+
                         >
                             Reservá tu cita
                         </Button>

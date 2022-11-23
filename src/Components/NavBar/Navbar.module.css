@@ -32,3 +32,12 @@
 .ToolBar{
     min-height: 85px !important;
 }
+.icon{
+    width: 5% !important;
+    border-radius: 0 !important;
+}
+.boxButton{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}

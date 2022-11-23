@@ -1,0 +1,48 @@
+.box {
+    width: 100% !important;
+    height: 500px !important;
+}
+
+.datos {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 20px;
+    justify-content: space-evenly;
+    width: 100%;
+    height: 70%;
+}
+
+
+
+.ener h3 {
+    color: #34CDC3;
+}
+
+.ener p {
+    color: black;
+    padding-top: 25px;
+}
+.adelgazar h3 {
+    color: #34CDC3;
+}
+
+.adelgazar p {
+    color: black;
+    padding-top: 25px;
+}
+
+.reven h3{
+    color: #34CDC3;
+}
+.reven p{
+    color: black;
+    padding-top: 25px;
+}
+.otros h3{
+    color: #34CDC3;
+}
+.otros p{
+    color: black;
+    padding-top: 25px;
+}
