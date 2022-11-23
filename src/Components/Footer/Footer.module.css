@@ -40,7 +40,7 @@
     color: black;
 }
 .transparente{
-    color: transparent !important;
+    visibility: hidden;
 }
 
 /* Hacer responsive de datos */
