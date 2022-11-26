@@ -16,7 +16,7 @@
 
 
 .card {
-    width: 320px !important;
+    width: 340px !important;
     height: 295px;
     padding: .8em;
     background: #62CCC5;
@@ -29,16 +29,34 @@
 }
 
 .card-active {
-    width: 350px !important;
+    width: 370px !important;
     opacity: 1;
     transform: scale(1);
     background-color: #FFFF;
-    box-shadow: inset 0 0 15px 0 rgb(0, 0, 0, 0.8) !important;
+    box-shadow: inset 0 0 15px 0 rgb(0, 0, 0, 0.2) !important;
+}
+
+.buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;   
 }
 
 .button {
-    background-color: #FFFF;
-    color: #57BAB3;
+    padding: 1.3em 3em;
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 2.5px;
+    font-weight: 500;
+    color: #000;
+    background-color: #fff;
+    border: none;
+    border-radius: 45px;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease 0s;
+    cursor: pointer;
+    outline: none;
 }
 
 .button-active {
@@ -46,6 +64,116 @@
     color: #ffff;
 }
 
+/* BUTTON VER MAS */
+
+.buttonMore {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.buttonMore span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+}
+
+.hover-underline-animation {
+    position: relative;
+    color: white;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #ffff;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.buttonMore:hover .hover-underline-animation:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+
+
+/* 
+
+ACTIVE
+
+*/
+
+
+.buttonMore-active{
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+
+.buttonMore-active span {
+    padding-bottom: 7px;
+    letter-spacing: 4px;
+    font-size: 14px;
+    padding-right: 15px;
+    text-transform: uppercase;
+}
+
+.hover-underline-animation-active {
+    position: relative;
+    color: #62CCC5;
+    padding-bottom: 20px;
+}
+
+.hover-underline-animation-active:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    transform: scaleX(0);
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: #62CCC5;
+    transform-origin: bottom right;
+    transition: transform 0.25s ease-out;
+}
+
+.buttonMore-active:hover .hover-underline-animation-active:after {
+    transform: scaleX(1);
+    transform-origin: bottom left;
+}
+
+/* SVG */
+
+/* .svg{
+    color: #FFFF !important;
+}
+.svg-active{
+    color: #62CCC5 !
+} */
+ .buttonMas{
+    border: none !important;
+    color: #FFFF !important;
+    text-decoration: underline !important;
+}
+
+.buttonMas-active{
+    border: none !important;
+    color: #62CCC5 !important;
+    text-decoration: underline !important;
+    line-height: 5pt !important;
+}
+.buttonMas:hover{
+    background-color: transparent !important;
+}
 .card-img {
     background-color: #ffcaa6;
     height: 40%;
@@ -76,21 +204,34 @@ svg {
 .text-title {
     font-weight: 700;
     font-size: 30px;
-    line-height: 1.5;
     color: white !important;
     font-family: 'Poppins', sans-serif;
+    padding-bottom: 10px;
 }
 
 .text-title-active {
     color: #62CCC5 !important;
 }
 
+.text-price {
+    font-weight: 700;
+    font-size: 30px;
+    color: white !important;
+    font-family: 'Poppins', sans-serif;
+    padding-top: 13px;
+    padding-bottom: 13px;
+}
+
+.text-price-active {
+    color: #636262 !important;
+}
 
 .text-body {
-    font-size: .9em;
+    font-size: 17px;
     padding-bottom: 10px;
     color: white !important;
     font-family: 'Inter', sans-serif;
+    padding-bottom: 15px !important;
 }
 
 .text-body-active {
@@ -117,4 +258,18 @@ svg {
 .card-button:hover {
     border: 1px solid #ffcaa6;
     background-color: #ffcaa6;
+}
+
+.container-textos {
+    width: 100%;
+    height: auto;
+    margin-top: 100px;
+}
+
+.container-textos p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #8B8B8B;
+    gap: 5px;
 }

@@ -4,7 +4,9 @@ import './SliderPrueba.css'
 import "slick-carousel/slick/slick-theme.css"
 import "slick-carousel/slick/slick.css"
 import Tratamientos from '../../Tratamientos'
-
+import CheckCircleOutlineIcon from '@mui/icons-material/CheckCircleOutline';
+import ArrowRightAltIcon from '@mui/icons-material/ArrowRightAlt';
+import Button from '@mui/material/Button';
 
 export default function SliderPrueba() {
     const [slideIndex, setSlideIndex] = useState(0)
@@ -56,25 +58,28 @@ export default function SliderPrueba() {
                     <div class={index === slideIndex ? "card card-active" : "card"}>
                         <div class="card-info">
                             <p class={index === slideIndex ? "text-title text-title-active" : "text-title"}>{item.Titulo} </p>
+                            <h2 class={index === slideIndex ? "text-price text-price-active" : "text-price"}>{item.precio}</h2>
                             <p class={index === slideIndex ? "text-body text-body-active" : "text-body"}>{item.descripcion}</p>
                         </div>
-                        <div class="card-footer">
-                            <span class="text-title">{item.precio}</span>
+                        <div class="buttons">
+
+                            <button class={index === slideIndex ? "button button-active" : "button"}>
+                                Reservar
+                            </button>
+                            <Button  endIcon={<ArrowRightAltIcon />} className={index === slideIndex ? "buttonMas buttonMas-active" : "buttonMas"} >
+                                ver mas
+                            </Button>
+                        </div>
+                        <div class="container-textos">
+                            <p class={index === slideIndex ? "container-textos p-active" : "container-textos"}>
+                                <CheckCircleOutlineIcon style={{ color: '#57BAB3' }} /> {item.text}
+                            </p>
 
                         </div>
-                        <div>
-
-                        <button class={index === slideIndex ? "button button-active" : "button"}>
-                            Reservar
-                        </button>
-                        <button>
-                            Ver mas
-                        </button>
-                        </div>
-
                     </div>
                 ))}
             </Slider>
         </div>
     )
 }
+
