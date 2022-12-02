@@ -19,7 +19,7 @@ const Tratamientos = [
         id: 2,
         Titulo: "Weight Loss",
         precio: "$680",
-        descripcion: "Accede a nuestro eficiente plan de perdida de peso, con nuestra especial membresia adaptada para vos de uno, tres o 6 meses.",
+        descripcion: "Accede a nuestro eficiente plan de perdida de peso, con nuestra especial membresia adaptada...",
         text: "100% seguro y efectivo ",
     },
     {

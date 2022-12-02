@@ -48,7 +48,7 @@ const Navbar = (props) => {
             <List>
                 {navItems.map((item) => (
                     <ListItem key={item} disablePadding >
-                        <ListItemButton sx={{ textAlign: 'center' }} >
+                        <ListItemButton sx={{ textAlign: 'center', color: 'black'}} >
                             <ListItemText primary={item} />
                         </ListItemButton>
                     </ListItem>
@@ -92,7 +92,7 @@ const Navbar = (props) => {
                                 key={item}
                                 sx={item === "Tratamientos"
                                     ? { color: '#57BAB3', fontWeight: '700' }
-                                    : { color: '#636262', fontWeight: '700' }}
+                                    : { color: 'black', fontWeight: '700' }}
                             >
                                 {item}
                             </Button>

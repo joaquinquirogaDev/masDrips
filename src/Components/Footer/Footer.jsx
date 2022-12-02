@@ -34,13 +34,13 @@ export default function Footer() {
                     <h3>Servicios</h3>
                     <p>Tratamientos</p>
                     <p>Membresias</p>
-                    <p className={style.transparente}>Transparente</p>
+                    {/* <p className={style.transparente}>Transparente</p> */}
                 </div>
                 <div className={style.contacto}>
                     <h3>Contacto</h3>
                     <p>11 2598 2200</p>
                     <p>contacto@masdrips.com</p>
-                    <p className={style.transparente}>Transparente</p>
+                    {/* <p className={style.transparente}>Transparente</p> */}
                 </div>
             </div>
 

@@ -7,20 +7,22 @@ import Navbar from './Components/NavBar/Navbar.jsx'
 import Footer from './Components/Footer/Footer.jsx'
 import Slider from './Components/Slider/SliderPrueba';
 import Home from './Components/Home/Home';
+import Cards from './Components/Cards/Cards';
 function App() {
 
   return (
     <Router>
-      
-                <Navbar />
-        <Routes>
-        <Route path="/" exact element={<Footer />} />
-        <Route path='/slider' exact element={<Slider/>}/>
-        <Route path='/home' exact element={<Home/>}/>
 
-        </Routes>
-        
-      </Router>
+      <Navbar />
+      <Routes>
+        <Route path="/" exact element={<Footer />} />
+        <Route path='/slider' exact element={<Slider />} />
+        <Route path='/home' exact element={<Home />} />
+        <Route path='/cards' exact element={<Cards />} />
+
+      </Routes>
+      <Footer/>
+    </Router>
   )
 }
 
