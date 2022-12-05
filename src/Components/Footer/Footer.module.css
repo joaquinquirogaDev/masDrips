@@ -1,4 +1,4 @@
-.container{
+.container {
     display: flex;
     width: 100%;
     height: 200px;
@@ -9,56 +9,181 @@
     position: absolute;
     box-shadow: inset 0 0 15px 0 rgb(0, 0, 0, 0.2) !important;
 }
-.nosotros{
+
+.nosotros {
     display: flex;
     justify-content: center;
     /* align-items: center; */
     flex-direction: column;
     height: 100%;
 }
-.servicios{
+
+.servicios {
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 100%;
 
 }
-.contacto{
+
+.contacto {
     display: flex;
     justify-content: center;
     flex-direction: column;
     height: 100%;
 
 }
-.container p{
+
+.container p {
     color: black;
     padding-top: 10px;
 }
-.nosotros h3{
+
+.nosotros h3 {
     color: #34CDC3;
 }
-.nosotros p{
+
+.nosotros p {
     color: black;
 }
-.servicios h3{
+
+.servicios h3 {
     color: #34CDC3;
 }
-.servicios p{
+
+.servicios p {
     color: black;
 }
-.datos{
+
+.datos {
     display: flex;
     flex-direction: row;
     gap: 20px;
     justify-content: center;
-    
+    /* grid-template-rows: repeat(auto-fill, minmax(200px, 1fr)) !important; */
+
 }
-.contacto h3{
- color: #34CDC3;
+
+.contacto h3 {
+    color: #34CDC3;
 }
+
 .contacto p {
     color: black;
 }
 
+.redes {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+@media(max-width: 800px) {
+    .container {
+        display: grid !important;
+        grid-template-rows: repeat(auto-fill, minmax(100px, 1fr)) !important;
+        height: auto;
+        padding: 0 !important;
+        gap: 5px;
+    }
+    .logo{
+        margin-top: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 14px;
+    }
+
+    .datos {
+        display: flex !important;
+        /* grid-template-rows: repeat(auto-fill, minmax(100px, 1fr)) !important; */
+        margin-bottom: 10px;
+        width: 100% !important;
+        font-size: 15px;
+        justify-content: center;
+    }
+
+    .nosotros {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .servicios {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    .contacto {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        
+    }
+}
+
+@media(max-width: 500px) {
+    .container {
+        display: grid !important;
+        grid-template-rows: repeat(auto-fill, minmax(100px, 1fr)) !important;
+        height: auto;
+        padding: 0 !important;
+        gap: 5px;
+    }
+    .logo{
+        margin-top: 20px;
+        text-align: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        font-size: 12px;
+        flex-wrap: wrap;
+    }
+
+    .datos {
+        display: flex !important;
+        /* grid-template-rows: repeat(auto-fill, minmax(100px, 1fr)) !important; */
+        margin-bottom: 10px;
+        width: 100% !important;
+        font-size: 11.5px;
+        justify-content: center;
+    }
+
+    .nosotros {
+        display: flex;
+        justify-content: center;
+        /* align-items: center; */
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .servicios {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+
+    }
+
+    .contacto {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        width: 100%;
+        
+    }
+}
 
 /* Hacer responsive de datos */

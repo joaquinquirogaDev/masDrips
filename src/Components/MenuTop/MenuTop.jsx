@@ -18,31 +18,24 @@ export default function MenuTop({ toggleDrawer, toggleDrawerClose}) {
                     <p>Terminos y condiciones</p>
                     <p>FAQs</p>
                     <p>contacto@masdrips.com</p>
-                    <p>Transparente</p>
                 </div>
                 <div className={style.reven}>
                     <h3>REJUVENECEDORES</h3>
                     <p>Tratamientos</p>
                     <p>Membresias</p>
-                    <p>Transparente</p>
                     <p>contacto@masdrips.com</p>
-                    <p>Transparente</p>
                 </div>
                 <div className={style.ener}>
                     <h3>ENERGIZANTES</h3>
                     <p>11 2598 2200</p>
                     <p>contacto@masdrips.com</p>
-                    <p>Transparente</p>
                     <p>contacto@masdrips.com</p>
-                    <p>Transparente</p>
                 </div>
                 <div className={style.otros}>
                     <h3>OTROS</h3>
                     <p>11 2598 2200</p>
                     <p>contacto@masdrips.com</p>
-                    <p>Transparente</p>
                     <p>contacto@masdrips.com</p>
-                    <p>Transparente</p>
                 </div>
             </div>
         </Box>

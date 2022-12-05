@@ -1,16 +1,17 @@
 .box {
     width: 100% !important;
     height: 500px !important;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .datos {
     display: flex;
-    flex-direction: row;
-    align-items: center;
+    /* flex-direction: row; */
     gap: 20px;
     justify-content: space-evenly;
     width: 100%;
-    height: 70%;
 }
 
 
@@ -29,7 +30,7 @@
 
 .adelgazar p {
     color: black;
-    padding-top: 25px;
+    padding-top: 20px;
 }
 
 .reven h3{
@@ -45,4 +46,29 @@
 .otros p{
     color: black;
     padding-top: 25px;
+}
+
+.adelgazar{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.otros{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.reven{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+}
+.ener{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
 }

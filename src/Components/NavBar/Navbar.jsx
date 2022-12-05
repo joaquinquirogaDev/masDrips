@@ -41,15 +41,22 @@ const Navbar = (props) => {
 
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
-            <Typography variant="h6" sx={{ my: 2 }}>
-                Drips
-            </Typography>
-            <Divider />
+            <div className={style.logoMedia}>
+            <Avatar
+                alt="Cindy Baker"
+                src={LogoDrips}
+                variant="square"
+                sx={{ width: '50%', height:'100%'}}
+            />
+            </div>
             <List>
                 {navItems.map((item) => (
                     <ListItem key={item} disablePadding >
-                        <ListItemButton sx={{ textAlign: 'center', color: 'black'}} >
-                            <ListItemText primary={item} />
+                        <ListItemButton sx={{ textAlign: 'center', color: 'black' }} >
+                            <ListItemText primary={item} sx={item === "Tratamientos"
+                                ? { color: '#57BAB3', fontWeight: '700' }
+                                : { color: 'black', fontWeight: '700' }}
+                            />
                         </ListItemButton>
                     </ListItem>
                 ))}
@@ -57,7 +64,7 @@ const Navbar = (props) => {
         </Box>
     );
     const drawerWidth = 1900;
-
+    const drawerWidthMobile = 330;
     const container = window !== undefined ? () => window().document.body : undefined;
 
     return (
@@ -69,7 +76,7 @@ const Navbar = (props) => {
                         aria-label="open drawer"
                         edge="start"
                         onClick={handleDrawerToggle}
-                        sx={{ mr: 2, display: { sm: 'none' } }}
+                        sx={{ mr: 2, display: { sm: 'none' }, color: 'black' }}
                     >
                         <MenuIcon />
                     </IconButton>
@@ -114,15 +121,15 @@ const Navbar = (props) => {
                             anchor='top'
                             open={state}
                             onOpen={() => toggleDrawer()}
-                            
+
 
                         >
                             <div className={style.box}>
-                            <div className={style.boxButton}>
-                            <IconButton onClick={toggleDrawerClose} className={style.icon} disableFocusRipple>
-                            <HighlightOffSharpIcon sx={{color: '#73D8D1'}}/>
-                            </IconButton>
-                            </div>
+                                <div className={style.boxButton}>
+                                    <IconButton onClick={toggleDrawerClose} className={style.icon} disableFocusRipple>
+                                        <HighlightOffSharpIcon sx={{ color: '#73D8D1' }} />
+                                    </IconButton>
+                                </div>
                                 {<MenuTop state={state} toggleDrawer={() => toggleDrawer()} setState={setState} toggleDrawerClose={() => toggleDrawerClose()} />}
                             </div>
                         </Drawer>
@@ -151,7 +158,7 @@ const Navbar = (props) => {
                     }}
                     sx={{
                         display: { xs: 'block', sm: 'none' },
-                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidth },
+                        '& .MuiDrawer-paper': { boxSizing: 'border-box', width: drawerWidthMobile },
                     }}
                 >
                     {drawer}
