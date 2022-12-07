@@ -83,7 +83,7 @@ const Navbar = (props) => {
                     <Typography
                         variant="h6"
                         component="div"
-                        sx={{ flexGrow: 1, width: '15%', display: { xs: 'none', sm: 'block' } }}
+                        sx={{ flexGrow: 1, width: '15%', display: { xs: 'block', sm: 'block'}, display: 'flex', alignItems: 'center', justifyContent: 'center' }}
                     >
                         <Avatar
                             alt="Cindy Baker"
@@ -92,7 +92,7 @@ const Navbar = (props) => {
                             sx={{ width: '120px' }}
                         />
                     </Typography>
-                    <Box sx={{ width: '80%', display: { xs: 'none', sm: 'block' } }}>
+                    <Box sx={{ width: '85%', display: { xs: 'none', sm: 'block' } }}>
                         {navItems.map((item) => (
                             <Button
                                 onClick={(e) => { item === "Tratamientos" ? toggleDrawer() : "" }}
