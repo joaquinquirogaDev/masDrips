@@ -8,6 +8,7 @@ import Footer from './Components/Footer/Footer.jsx'
 import Slider from './Components/Slider/SliderPrueba';
 import Home from './Components/Home/Home';
 import Cards from './Components/Cards/Cards';
+import WeightLoss from './Components/WeightLoss/WeightLoss';
 function App() {
 
   return (
@@ -15,10 +16,11 @@ function App() {
 
       <Navbar />
       <Routes>
-        <Route path="/" exact element={<Footer />} />
+        <Route path="/footer" exact element={<Footer />} />
         <Route path='/slider' exact element={<Slider />} />
-        <Route path='/home' exact element={<Home />} />
+        <Route path='/' exact element={<Home />} />
         <Route path='/cards' exact element={<Cards />} />
+        <Route path='/weight' exact element={<WeightLoss />} />
 
       </Routes>
       <Footer/>

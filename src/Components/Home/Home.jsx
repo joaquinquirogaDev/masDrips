@@ -18,6 +18,7 @@ export default function Home() {
                         </SwipeableDrawer>
                     </React.Fragment>
             </div> */}
+            <h1>hola</h1>
         </div>
     )
 }

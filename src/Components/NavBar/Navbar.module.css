@@ -2,7 +2,7 @@
     max-width: none !important;
     padding-left: none !important;
     padding-right: none !important;
-    width: 20% !important;
+    width: 45% !important;
 
 }
 
@@ -47,4 +47,9 @@
     justify-content: center;
     margin-top: 20px;
     width: 100%;
+}
+.datosTop{
+    align-items: center !important;
+    display: flex !important;
+    justify-content: center !important;
 }

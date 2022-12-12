@@ -6,9 +6,11 @@ import Typography from '@mui/material/Typography';
 import FacebookRoundedIcon from '@mui/icons-material/FacebookRounded';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import { Container } from '@mui/material';
+
 export default function Footer() {
     return (
-        <div className={style.container}>
+        <Container className={style.container}>
             <div className={style.logo}>
                 <Typography
                     variant="h6"
@@ -43,14 +45,14 @@ export default function Footer() {
                     <p>11 2598 2200</p>
                     <p>contacto@masdrips.com</p>
                     <div className={style.redes}>
-                        <FacebookRoundedIcon sx={{color: '#34CDC3'}}/>
-                        <InstagramIcon sx={{color: '#34CDC3'}}/>
-                        <TwitterIcon sx={{color: '#34CDC3'}}/>
+                        <FacebookRoundedIcon sx={{ color: '#34CDC3' }} />
+                        <InstagramIcon sx={{ color: '#34CDC3' }} />
+                        <TwitterIcon sx={{ color: '#34CDC3' }} />
                     </div>
                     {/* <p className={style.transparente}>Transparente</p> */}
                 </div>
             </div>
 
-        </div>
+        </Container>
     )
 }
