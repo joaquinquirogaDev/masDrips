@@ -14,6 +14,10 @@
     margin: 0 -10px;
 }
 
+.slick-dots{
+    bottom: 250px !important;
+}
+
 
 .card {
     width: 340px !important;

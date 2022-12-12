@@ -20,6 +20,8 @@ import cruz from '../Imagenes/cruz.png'
 import { useNavigate } from 'react-router-dom';
 
 
+import SliderPrueba from '../Slider/SliderPrueba';
+
 export default function WeightLoss() {
     const [vuelta, setVuelta] = useState(true)
     const navigate = useNavigate()
@@ -29,6 +31,7 @@ export default function WeightLoss() {
                 display: 'flex',
                 justifyContent: 'center',
                 alignItems: 'center',
+                flexDirection: 'column',
                 marginTop: '100px'
             }}
         >
@@ -117,7 +120,9 @@ export default function WeightLoss() {
                                     <Typography sx={{ color: '#73D8D1' }}>Cuándo gotear</Typography>
                                 </AccordionSummary>
                                 <AccordionDetails className={style.acordionDetails}>
-                                    <Typography>
+                                    <Typography 
+                                    sx={{textAlign: 'left'}}
+                                    >
                                         Una vez por semana durante las primeras 6 semanas.
                                         Mantener una o dos sesiones mensuales.
                                     </Typography>
@@ -134,7 +139,9 @@ export default function WeightLoss() {
                                     <Typography sx={{ color: '#73D8D1' }}>Cómo utilizar</Typography>
                                 </AccordionSummary>
                                 <AccordionDetails className={style.acordionDetails}>
-                                    <Typography>
+                                    <Typography 
+                                    sx={{textAlign: 'left'}}
+                                    >
                                         Una vez por semana durante las primeras 6 semanas.
                                         Mantener una o dos sesiones mensuales.
                                     </Typography>
@@ -160,6 +167,10 @@ export default function WeightLoss() {
 
 
 
+            </div>
+            <div className={style.slider}>
+            <h1>Tratamientos</h1>
+            <SliderPrueba/>
             </div>
         </Box >
     )
