@@ -1,24 +1,15 @@
-import React, { useState } from 'react'
-import MenuTop from '../MenuTop/MenuTop'
-import { Button } from '@mui/material';
-import SwipeableDrawer from '@mui/material/SwipeableDrawer';
-
+import React, { useState, useMemo } from 'react'
+import Map from '../Map'
 export default function Home() {
     
     return (
         <div>
-            {/* <div>
-                    <React.Fragment >
-                        <Button onClick={() => toggleDrawer()}>Abrir</Button>
-                        <SwipeableDrawer
-                            open={state}
-                            onClose={() => toggleDrawerClose()}
-                            onOpen={() => toggleDrawer()}
-                        >
-                        </SwipeableDrawer>
-                    </React.Fragment>
-            </div> */}
-            <h1>hola</h1>
+            <Map
+            googleMapURL= {"https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyCuRuflska2w89yln4KMIUGuyisLCrNl30"}
+            containerElement= {<div style={{height: '400px'}}/>}
+            mapElement= {<div style={{height: '100%'}}/>}
+            loadingElement= {<p>Cargando</p>}
+            />
         </div>
     )
 }
