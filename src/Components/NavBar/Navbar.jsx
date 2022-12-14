@@ -21,11 +21,13 @@ import MenuTop from '../MenuTop/MenuTop';
 import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import HighlightOffSharpIcon from '@mui/icons-material/HighlightOffSharp';
 import WeightLoss from '../WeightLoss/WeightLoss';
+import { useNavigate } from 'react-router-dom';
 
 const drawerWidth = 240;
 const navItems = ['Tratamientos', 'Sobre Nosotros', 'FAQs', 'Área de cobertura'];
 
 const Navbar = (props) => {
+    const navigate = useNavigate()
     const [state, setState] = useState(false);
     const toggleDrawer = () => {
         setState(true);
@@ -43,12 +45,12 @@ const Navbar = (props) => {
     const drawer = (
         <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
             <div className={style.logoMedia}>
-            <Avatar
-                alt="Cindy Baker"
-                src={LogoDrips}
-                variant="square"
-                sx={{ width: '50%', height:'100%'}}
-            />
+                <Avatar
+                    alt="Cindy Baker"
+                    src={LogoDrips}
+                    variant="square"
+                    sx={{ width: '50%', height: '100%' }}
+                />
             </div>
             <List>
                 {navItems.map((item) => (
@@ -77,7 +79,7 @@ const Navbar = (props) => {
                         aria-label="open drawer"
                         edge="start"
                         onClick={handleDrawerToggle}
-                        sx={{ mr: 1, display: { xs:'block', sm: 'block', md: 'block', lg: 'none'}, color: 'black' }}
+                        sx={{ mr: 1, display: { xs: 'block', sm: 'block', md: 'block', lg: 'none' }, color: 'black' }}
                     >
                         <MenuIcon />
                     </IconButton>
@@ -85,7 +87,7 @@ const Navbar = (props) => {
                         className={style.datosTop}
                         variant="h6"
                         component="div"
-                        sx={{ flexGrow: 1, width: '15%', display: { xs: 'block', sm: 'block'}}}
+                        sx={{ flexGrow: 1, width: '15%', display: { xs: 'block', sm: 'block' } }}
                     >
                         <Avatar
                             alt="Cindy Baker"
@@ -94,20 +96,35 @@ const Navbar = (props) => {
                             sx={{ width: '120px' }}
                         />
                     </Typography>
-                    <Box sx={{ width: '90%', display: { xs: 'none', sm: 'none', md:'none',lg: 'block'} }} >
-                        {navItems.map((item) => (
-                            <Button
-                                onClick={(e) => { item === "Tratamientos" ? toggleDrawer() : "" }}
-                                key={item}
-                                sx={item === "Tratamientos"
-                                    ? { color: '#57BAB3', fontWeight: '700' }
-                                    : { color: 'black', fontWeight: '700' }}
-                            >
-                                {item}
-                            </Button>
-                        ))}
+                    <Box sx={{ width: '90%', display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' } }} >
+                        <Button
+                            onClick={(e) => { toggleDrawer() }}
+                            sx={{ color: '#57BAB3', fontWeight: '700' }}
+                        >
+
+                            Tratamientos
+                        </Button>
+                        <Button
+                            sx={{ color: 'black', fontWeight: '700' }}
+                        >
+
+                            SOBRE NOSOTROS
+                        </Button>
+                        <Button
+                            sx={{ color: 'black', fontWeight: '700' }}
+                        >
+
+                            FAQS
+                        </Button>
+                        <Button
+                            onClick={() => navigate("/map")}
+                            sx={{ color: 'black', fontWeight: '700' }}
+                        >
+
+                            Área de cobertura
+                        </Button>
                         <Drawer
-                        
+
                             sx={{
                                 display: { xs: 'none', md: 'block' },
                                 overflow: 'auto',
