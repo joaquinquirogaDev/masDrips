@@ -5,6 +5,8 @@
     flex-direction: row;
     justify-content: center;
     align-items: center;
+    max-width: 1300px !important;
+
 }
 .box1{
     width: 45%;
