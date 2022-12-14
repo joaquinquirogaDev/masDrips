@@ -9,6 +9,7 @@ import Slider from './Components/Slider/SliderPrueba';
 import Home from './Components/Home/Home';
 import Cards from './Components/Cards/Cards';
 import WeightLoss from './Components/WeightLoss/WeightLoss';
+import Map from './Components/Map/Map.jsx'
 function App() {
 
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path='/' exact element={<Home />} />
         <Route path='/cards' exact element={<Cards />} />
         <Route path='/weight' exact element={<WeightLoss />} />
+        <Route path='/map' exact element={<Map />} />
 
       </Routes>
       <Footer/>
