@@ -317,7 +317,7 @@
     .cajaDatos h1 {
         color: #636262;
         max-width: 300px;
-        min-width: 300px;
+        min-width: 200px;
         font-size: 18px;
     }
 
@@ -363,6 +363,16 @@
     .seccion3 h3 {
         color: #62CCC5;
         font-size: 14px;
+    }
+    .video {
+        width: 90%;
+        min-width: 250px;
+        max-width: 600px;
+    }
+    
+    .video video {
+        width: 100%;
+        min-width: 250px;
     }
 
 }
