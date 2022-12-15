@@ -316,7 +316,7 @@ const Navbar = (props) => {
 
     return (
         <Box sx={{ display: 'flex' }}>
-            <AppBar component="nav" style={{ backgroundColor: '#FFFF', display: 'flex', justifyContent: 'space-between', alignCente: 'center', height: '80px', paddingTop: '5px' }}>
+            <AppBar component="nav" style={{ backgroundColor: '#FFFF', display: 'flex', justifyContent: 'space-between', alignCente: 'center', height: '80px', paddingTop: '5px', width: '100%'}}>
                 <Toolbar >
                     <IconButton
                         color="inherit"
@@ -328,7 +328,6 @@ const Navbar = (props) => {
                         <MenuIcon />
                     </IconButton>
                     <Typography
-                        className={style.datosTop}
                         variant="h6"
                         component="div"
                         sx={{ flexGrow: 1, width: '15%', display: { xs: 'block', sm: 'block' } }}
@@ -341,7 +340,7 @@ const Navbar = (props) => {
                             onClick={() => navigate("/")}
                         />
                     </Typography>
-                    <Box sx={{ width: '90%', display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' } }} >
+                    <Box sx={{ width: '70%', display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' }}}>
                         <Button
                             onClick={(e) => { toggleDrawer() }}
                             sx={{ color: '#57BAB3', fontWeight: '700' }}

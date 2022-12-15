@@ -2,8 +2,10 @@
     max-width: none !important;
     padding-left: none !important;
     padding-right: none !important;
-    width: 45% !important;
-
+    width: 15% !important;
+    display: flex !important;
+    justify-content: center;
+    align-items: flex-end;
 }
 
 .ButtonReservar {
@@ -15,6 +17,7 @@
     padding: 10px 10px !important;
     font-weight: 700 !important;
     color:  #62CCC5 !important;
+    width: 100% !important;
 }
 .ButtonReservar:hover{
     box-shadow: -9px -60px 107px -76px rgba(128,128,128,0.32) inset;
@@ -49,7 +52,19 @@
     width: 100%;
 }
 .datosTop{
-    align-items: center !important;
+    align-items: center!important;
     display: flex !important;
-    justify-content: center !important;
+    justify-content: flex-end !important;
+}
+@media(max-width: 1300px){
+    .ContainerButton {
+        max-width: none !important;
+        padding-left: none !important;
+        padding-right: none !important;
+        width: 25% !important;
+        display: flex !important;
+        justify-content: center;
+        align-items: flex-end;
+        min-width: 200px;
+    }
 }
