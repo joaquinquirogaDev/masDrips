@@ -304,7 +304,7 @@ const Navbar = (props) => {
                 <ListItemButton sx={{ textAlign: 'center', color: 'black' }} >
                     <ListItemText primary="FAQs" sx={{ color: 'black', fontWeight: '700' }} />
                 </ListItemButton>
-                <ListItemButton sx={{ textAlign: 'center', color: 'black' }} >
+                <ListItemButton sx={{ textAlign: 'center', color: 'black' }} onClick={() => navigate("/map")}>
                     <ListItemText primary="Área de cobertura" sx={{ color: 'black', fontWeight: '700' }} />
                 </ListItemButton>
             </List>
