@@ -22,13 +22,36 @@ import SwipeableDrawer from '@mui/material/SwipeableDrawer';
 import HighlightOffSharpIcon from '@mui/icons-material/HighlightOffSharp';
 import WeightLoss from '../WeightLoss/WeightLoss';
 import { useNavigate } from 'react-router-dom';
+import Collapse from '@mui/material/Collapse';
+import ExpandLess from '@mui/icons-material/ExpandLess';
+import ExpandMore from '@mui/icons-material/ExpandMore';
+import ListItemIcon from '@mui/material/ListItemIcon';
+import ChevronLeftIcon from '@mui/icons-material/ChevronLeft';
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
+import { styled, useTheme } from '@mui/material/styles';
+import LocalAtmIcon from '@mui/icons-material/LocalAtm';
 
+
+const DrawerHeader = styled('div')(({ theme }) => ({
+    display: 'flex',
+    alignItems: 'center',
+    padding: theme.spacing(0, 1),
+    // necessary for content to be below app bar
+    ...theme.mixins.toolbar,
+    justifyContent: 'flex-end',
+}));
 const drawerWidth = 240;
 const navItems = ['Tratamientos', 'Sobre Nosotros', 'FAQs', 'Área de cobertura'];
 
 const Navbar = (props) => {
     const navigate = useNavigate()
     const [state, setState] = useState(false);
+    const theme = useTheme();
+    const [openTutoresResponsables, setOpenTutoresResponsables] = useState(false);
+    const [reven, setReven] = useState(false);
+    const [ener, setEner] = useState(false);
+    const [otros, setOtros] = useState(false);
+
     const toggleDrawer = () => {
         setState(true);
     };
@@ -36,14 +59,50 @@ const Navbar = (props) => {
         setState(false);
     };
     const { window } = props;
-    const [mobileOpen, setMobileOpen] = React.useState(false);
+    const [mobileOpen, setMobileOpen] = useState(false);
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
+    const [open, setOpen] = React.useState(false);
+
+    const handleDrawerOpen = () => {
+        setOpen(true);
+    };
+
+    const handleDrawerClose = () => {
+        setOpen(false);
+    };
+
+    const handleClickTutoresResponsables = () => {
+        setOpenTutoresResponsables(!openTutoresResponsables);
+    }
+    const handleClickReven = () => {
+        setReven(!reven);
+    }
+
+    const handleClickEner = () => {
+        setEner(!ener);
+    }
+    const handleClickOtros = () => {
+        setOtros(!otros);
+    }
+
+
+    const [openDeudas, setOpenDeudas] = React.useState(false);
+
+    const handleClickDeudas = () => {
+        setOpenDeudas(!openDeudas);
+    };
+
+    const [opene, setOpene] = React.useState(false);
+
+    const handleClickes = () => {
+        setOpene(!opene);
+    };
 
     const drawer = (
-        <Box onClick={handleDrawerToggle} sx={{ textAlign: 'center' }}>
+        <Box sx={{ textAlign: 'center' }}>
             <div className={style.logoMedia}>
                 <Avatar
                     alt="Cindy Baker"
@@ -52,17 +111,202 @@ const Navbar = (props) => {
                     sx={{ width: '50%', height: '100%' }}
                 />
             </div>
-            <List>
-                {navItems.map((item) => (
-                    <ListItem key={item} disablePadding >
-                        <ListItemButton sx={{ textAlign: 'center', color: 'black' }} >
-                            <ListItemText primary={item} sx={item === "Tratamientos"
-                                ? { color: '#57BAB3', fontWeight: '700' }
-                                : { color: 'black', fontWeight: '700' }}
-                            />
+            <DrawerHeader>
+                <IconButton onClick={handleDrawerClose}>
+                    {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+                </IconButton>
+            </DrawerHeader>
+            <Divider />
+            <List
+                component="nav"
+                aria-labelledby="nested-list-subheader"
+                sx={{ display: 'flex', flexDirection: 'column' }}
+            >
+                <ListItemButton sx={{ textAlign: 'center', color: 'black' }} onClick={handleClickTutoresResponsables}>
+                    <ListItemText primary="Tratamientos" sx={{ color: '#57BAB3', fontWeight: '700' }} />
+                    {openTutoresResponsables ? <ExpandLess /> : <ExpandMore />}
+                </ListItemButton>
+                <Collapse in={openTutoresResponsables}>
+                    <List component="div" disablePadding>
+                        <ListItemButton sx={{ pl: 17 }} onClick={handleClickDeudas}>
+                            <ListItemText primary="Para adelgazar" />
+                            {openDeudas ? <ExpandLess /> : <ExpandMore />}
                         </ListItemButton>
-                    </ListItem>
-                ))}
+                        <Collapse in={openDeudas} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="Food Poisonning" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                        <Collapse in={openDeudas} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="C-Suite" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                        <Collapse in={openDeudas} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="Cleanse" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                        <Collapse in={openDeudas} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="Super Cleanse" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                        <Collapse in={openDeudas} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="Powerhouse" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                    </List>
+                </Collapse>
+                <Collapse in={openTutoresResponsables}>
+                    <List component="div" disablePadding>
+                        <ListItemButton sx={{ pl: 17 }} onClick={handleClickReven}>
+                            <ListItemText primary="Rejuvenecedores" />
+                            {reven ? <ExpandLess /> : <ExpandMore />}
+                        </ListItemButton>
+                        <Collapse in={reven} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="Jetlag" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                        <Collapse in={reven} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="Hangover" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                        <Collapse in={reven} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="Flawless" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                        <Collapse in={reven} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="Her" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                        <Collapse in={reven} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="Super Drip" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                    </List>
+                </Collapse>
+                <Collapse in={openTutoresResponsables}>
+                    <List component="div" disablePadding>
+                        <ListItemButton sx={{ pl: 17 }} onClick={handleClickEner}>
+                            <ListItemText primary="Energizantes" />
+                            {ener ? <ExpandLess /> : <ExpandMore />}
+                        </ListItemButton>
+                        <Collapse in={ener} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="Autoimmune" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                        <Collapse in={ener} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="Super Immunity" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                        <Collapse in={ener} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="Hidration" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                        <Collapse in={ener} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="Stress Relief" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                        <Collapse in={ener} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="Vit D Immunity" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                    </List>
+                </Collapse>
+                <Collapse in={openTutoresResponsables}>
+                    <List component="div" disablePadding>
+                        <ListItemButton sx={{ pl: 17 }} onClick={handleClickOtros}>
+                            <ListItemText primary="Otros" />
+                            {otros ? <ExpandLess /> : <ExpandMore />}
+                        </ListItemButton>
+                        <Collapse in={otros} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="Migraine" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                        <Collapse in={otros} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="Myers Cocktail" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                        <Collapse in={otros} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="NAD +" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                        <Collapse in={otros} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/listarDeudas")} >
+                                    <ListItemText primary="Super NAD +" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                        <Collapse in={otros} timeout="auto" unmountOnExit>
+                            <List component="div" disablePadding>
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/weight")} >
+                                    <ListItemText primary="Weight Loss" />
+                                </ListItemButton>
+                            </List>
+                        </Collapse>
+                    </List>
+                </Collapse>
+                <ListItemButton sx={{ textAlign: 'center', color: 'black' }} >
+                    <ListItemText primary="Sobre Nosotros" sx={{ color: 'black', fontWeight: '700' }} />
+                </ListItemButton>
+                <ListItemButton sx={{ textAlign: 'center', color: 'black' }} >
+                    <ListItemText primary="FAQs" sx={{ color: 'black', fontWeight: '700' }} />
+                </ListItemButton>
+                <ListItemButton sx={{ textAlign: 'center', color: 'black' }} >
+                    <ListItemText primary="Área de cobertura" sx={{ color: 'black', fontWeight: '700' }} />
+                </ListItemButton>
             </List>
         </Box>
     );
@@ -78,7 +322,7 @@ const Navbar = (props) => {
                         color="inherit"
                         aria-label="open drawer"
                         edge="start"
-                        onClick={handleDrawerToggle}
+                        onClick={handleDrawerOpen}
                         sx={{ mr: 1, display: { xs: 'block', sm: 'block', md: 'block', lg: 'none' }, color: 'black' }}
                     >
                         <MenuIcon />
@@ -172,9 +416,9 @@ const Navbar = (props) => {
             <Box component="nav">
                 <Drawer
                     container={container}
-                    variant="temporary"
-                    open={mobileOpen}
-                    onClose={handleDrawerToggle}
+                    variant="persistent"
+                    open={open}
+                    onClose={handleDrawerClose}
                     ModalProps={{
                         keepMounted: true, // Better open performance on mobile.
                     }}
