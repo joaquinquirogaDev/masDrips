@@ -91,18 +91,21 @@ export default function WeightLoss() {
                         <p>
                             <CheckCircleIcon
                                 sx={{ color: '#62CCC5' }}
+                                className={style.iconP}
                             />
                             Aumento del metabolismo
                         </p>
                         <p>
                             <CheckCircleIcon
                                 sx={{ color: '#62CCC5' }}
+                                className={style.iconP}
                             />
                             Promueve la descomosición de células grasas
                         </p>
                         <p>
                             <CheckCircleIcon
                                 sx={{ color: '#62CCC5' }}
+                                className={style.iconP}
                             />
                             Controla el estado de animo y el apetito
                         </p>

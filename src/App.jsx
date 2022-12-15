@@ -10,6 +10,7 @@ import Home from './Components/Home/Home';
 import Cards from './Components/Cards/Cards';
 import WeightLoss from './Components/WeightLoss/WeightLoss';
 import Map from './Components/Map/Map.jsx'
+import AboutUs from './Components/AboutUs/AboutUs';
 function App() {
 
   return (
@@ -23,6 +24,7 @@ function App() {
         <Route path='/cards' exact element={<Cards />} />
         <Route path='/weight' exact element={<WeightLoss />} />
         <Route path='/map' exact element={<Map />} />
+        <Route path='/aboutUs' exact element={<AboutUs />} />
 
       </Routes>
       <Footer/>

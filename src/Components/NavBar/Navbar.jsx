@@ -47,7 +47,7 @@ const Navbar = (props) => {
     const navigate = useNavigate()
     const [state, setState] = useState(false);
     const theme = useTheme();
-    const [openTutoresResponsables, setOpenTutoresResponsables] = useState(false);
+    const [openDrips, setopenDrips] = useState(false);
     const [reven, setReven] = useState(false);
     const [ener, setEner] = useState(false);
     const [otros, setOtros] = useState(false);
@@ -75,7 +75,7 @@ const Navbar = (props) => {
     };
 
     const handleClickTutoresResponsables = () => {
-        setOpenTutoresResponsables(!openTutoresResponsables);
+        setopenDrips(!openDrips);
     }
     const handleClickReven = () => {
         setReven(!reven);
@@ -110,12 +110,12 @@ const Navbar = (props) => {
                     variant="square"
                     sx={{ width: '50%', height: '100%' }}
                 />
-            </div>
-            <DrawerHeader>
-                <IconButton onClick={handleDrawerClose}>
+            <DrawerHeader >
+                <IconButton onClick={handleDrawerClose} >
                     {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
                 </IconButton>
             </DrawerHeader>
+            </div>
             <Divider />
             <List
                 component="nav"
@@ -124,9 +124,9 @@ const Navbar = (props) => {
             >
                 <ListItemButton sx={{ textAlign: 'center', color: 'black' }} onClick={handleClickTutoresResponsables}>
                     <ListItemText primary="Tratamientos" sx={{ color: '#57BAB3', fontWeight: '700' }} />
-                    {openTutoresResponsables ? <ExpandLess /> : <ExpandMore />}
+                    {openDrips? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
-                <Collapse in={openTutoresResponsables}>
+                <Collapse in={openDrips}>
                     <List component="div" disablePadding>
                         <ListItemButton sx={{ pl: 17 }} onClick={handleClickDeudas}>
                             <ListItemText primary="Para adelgazar" />
@@ -169,7 +169,7 @@ const Navbar = (props) => {
                         </Collapse>
                     </List>
                 </Collapse>
-                <Collapse in={openTutoresResponsables}>
+                <Collapse in={openDrips}>
                     <List component="div" disablePadding>
                         <ListItemButton sx={{ pl: 17 }} onClick={handleClickReven}>
                             <ListItemText primary="Rejuvenecedores" />
@@ -212,7 +212,7 @@ const Navbar = (props) => {
                         </Collapse>
                     </List>
                 </Collapse>
-                <Collapse in={openTutoresResponsables}>
+                <Collapse in={openDrips}>
                     <List component="div" disablePadding>
                         <ListItemButton sx={{ pl: 17 }} onClick={handleClickEner}>
                             <ListItemText primary="Energizantes" />
@@ -255,7 +255,7 @@ const Navbar = (props) => {
                         </Collapse>
                     </List>
                 </Collapse>
-                <Collapse in={openTutoresResponsables}>
+                <Collapse in={openDrips}>
                     <List component="div" disablePadding>
                         <ListItemButton sx={{ pl: 17 }} onClick={handleClickOtros}>
                             <ListItemText primary="Otros" />
