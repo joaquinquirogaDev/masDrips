@@ -11,10 +11,14 @@
 .container h1{
     color: #73D8D1 !important;
 }
-.container p{
+.classp{
     color: #696969 !important;
     text-align: center;
-    width: 35%;
+    width: 100%;
+    max-width: 800px;
+}
+.container p{
+    width: 100%;
 }
 .avatar-group {
     display: flex;
@@ -172,10 +176,15 @@
         color: #73D8D1 !important;
         font-size: 45px;
     }
-    .container p{
+
+    .classp{
         color: #696969 !important;
         text-align: center;
-        width: 75%;
+        width: 100%;
+        max-width: 800px;
+    }
+    .container p{
+        width: 100%;
         font-size: 15px;
     }
     .avatar img {
@@ -228,10 +237,17 @@
         color: #73D8D1 !important;
         font-size: 35px;
     }
-    .container p{
+    .classp{
         color: #696969 !important;
         text-align: center;
-        width: 75%;
+        width: 100%;
+        max-width: 800px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container p{
+        width: 60%;
         font-size: 15px;
     }
     .avatar img {
@@ -278,19 +294,38 @@
     }
 }
 @media(max-width: 750px){
+    .container{
+        height: 100vh;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 20px;
+        min-height: 100vh;
+        margin-top: 30px;
+    }
     .container h1{
         color: #73D8D1 !important;
-        font-size: 45px;
+        font-size: 25px;
     }
-    .container p{
+    .classp{
         color: #696969 !important;
         text-align: center;
-        width: 75%;
-        font-size: 15px;
+        width: 100%;
+        max-width: 800px;
+        min-width: 100px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    .container p{
+        width: 60%;
+        font-size: 12px;
     }
     .avatar img {
-        width: 6rem;
-        height: 6rem;
+        width: 5.5rem;
+        height: 5.5rem;
         display: block;
         object-fit: cover;
         border-radius: 50%;
@@ -300,8 +335,8 @@
         z-index: 99999 !important;
     }
     .avatar-izq img {
-        width: 6rem;
-        height: 6rem;
+        width: 5.5rem;
+        height: 5.5rem;
         display: block;
         object-fit: cover;
         border-radius: 50%;
@@ -311,8 +346,8 @@
         z-index: 1;
     }
     .avatar-dr img {
-        width: 6rem;
-        height: 6rem;
+        width: 5.5rem;
+        height: 5.5rem;
         display: block;
         object-fit: cover;
         border-radius: 50%;
@@ -322,8 +357,8 @@
         z-index: -1;
     }
     .avatar-active img {
-        width: 6.5rem;
-        height: 6.5rem;
+        width: 6rem;
+        height: 6rem;
         display: block;
         object-fit: cover;
         border-radius: 50% 50% 50% 50%;
@@ -332,4 +367,24 @@
         background-color: #62CCC5;
         scale: 1;
     }
+    .avatar:hover {
+        transform: 0;
+    }
+    .avatar-izq:hover {
+        transform: 0;
+        
+    }
+    .avatar-dr:hover {
+        transform: 0;
+        
+    }
+    .names{
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        justify-content: center;
+        align-items: center;
+        margin-top: 20px;
+    }
+    
 }

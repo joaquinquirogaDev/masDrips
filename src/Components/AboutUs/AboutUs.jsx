@@ -10,10 +10,12 @@ export default function AboutUs() {
     return (
         <div class="container">
             <h1>Conoce a nuestro equipo</h1>
+            <div class="classp">
             <p>Somos una empresa creada por jóvenes profesionales médicos quienes, tras más de 10 años de experiencia intra y extrahospitalaria
                 , comprendemos las necesidades del mundo actual y queremos brindarte la posibilidad de seguir cuidando tu salud,
                 desde la comodidad de tu hogar.
             </p>
+            </div>
             <div class="avatar-group">
                 <div class="avatar">
                     <span class="avatar-name">Someone 1</span>
