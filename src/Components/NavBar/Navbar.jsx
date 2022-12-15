@@ -337,7 +337,7 @@ const Navbar = (props) => {
                             alt="Cindy Baker"
                             src={LogoDrips}
                             variant="square"
-                            sx={{ width: '120px' }}
+                            sx={{ width: '120px', cursor: 'pointer'}}
                             onClick={() => navigate("/")}
                         />
                     </Typography>
