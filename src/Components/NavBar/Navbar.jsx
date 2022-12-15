@@ -338,6 +338,7 @@ const Navbar = (props) => {
                             src={LogoDrips}
                             variant="square"
                             sx={{ width: '120px' }}
+                            onClick={() => navigate("/")}
                         />
                     </Typography>
                     <Box sx={{ width: '90%', display: { xs: 'none', sm: 'none', md: 'none', lg: 'block' } }} >
