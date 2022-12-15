@@ -110,11 +110,11 @@ const Navbar = (props) => {
                     variant="square"
                     sx={{ width: '50%', height: '100%' }}
                 />
-            <DrawerHeader >
-                <IconButton onClick={handleDrawerClose} >
-                    {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
-                </IconButton>
-            </DrawerHeader>
+                <DrawerHeader >
+                    <IconButton onClick={handleDrawerClose} >
+                        {theme.direction === 'ltr' ? <ChevronLeftIcon /> : <ChevronRightIcon />}
+                    </IconButton>
+                </DrawerHeader>
             </div>
             <Divider />
             <List
@@ -124,7 +124,7 @@ const Navbar = (props) => {
             >
                 <ListItemButton sx={{ textAlign: 'center', color: 'black' }} onClick={handleClickTutoresResponsables}>
                     <ListItemText primary="Tratamientos" sx={{ color: '#57BAB3', fontWeight: '700' }} />
-                    {openDrips? <ExpandLess /> : <ExpandMore />}
+                    {openDrips ? <ExpandLess /> : <ExpandMore />}
                 </ListItemButton>
                 <Collapse in={openDrips}>
                     <List component="div" disablePadding>
@@ -298,7 +298,7 @@ const Navbar = (props) => {
                         </Collapse>
                     </List>
                 </Collapse>
-                <ListItemButton sx={{ textAlign: 'center', color: 'black' }} >
+                <ListItemButton sx={{ textAlign: 'center', color: 'black' }} onClick={() => navigate("/aboutUs")}>
                     <ListItemText primary="Sobre Nosotros" sx={{ color: 'black', fontWeight: '700' }} />
                 </ListItemButton>
                 <ListItemButton sx={{ textAlign: 'center', color: 'black' }} >
@@ -349,6 +349,7 @@ const Navbar = (props) => {
                             Tratamientos
                         </Button>
                         <Button
+                            onClick={() => navigate("/aboutUs")}
                             sx={{ color: 'black', fontWeight: '700' }}
                         >
 
