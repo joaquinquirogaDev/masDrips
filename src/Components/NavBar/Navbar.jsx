@@ -64,14 +64,15 @@ const Navbar = (props) => {
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
     };
-    const [open, setOpen] = React.useState(false);
+    const [open, setOpen] = useState(false);
 
     const handleDrawerOpen = () => {
         setOpen(true);
     };
 
-    const handleDrawerClose = () => {
+    const handleDrawerClose = (enlace) => {
         setOpen(false);
+        navigate(`/${enlace}`)
     };
 
     const handleClickTutoresResponsables = () => {
@@ -291,21 +292,24 @@ const Navbar = (props) => {
                         </Collapse>
                         <Collapse in={otros} timeout="auto" unmountOnExit>
                             <List component="div" disablePadding>
-                                <ListItemButton sx={{ pl: 20 }} onClick={() => navigate("/weight")} >
+                                <ListItemButton sx={{ pl: 20 }} onClick={() => handleDrawerClose("weight")}>
                                     <ListItemText primary="Weight Loss" />
                                 </ListItemButton>
                             </List>
                         </Collapse>
                     </List>
                 </Collapse>
-                <ListItemButton sx={{ textAlign: 'center', color: 'black' }} onClick={() => navigate("/aboutUs")}>
+                <ListItemButton sx={{ textAlign: 'center', color: 'black' }} onClick={() => handleDrawerClose("aboutUs")}>
                     <ListItemText primary="Sobre Nosotros" sx={{ color: 'black', fontWeight: '700' }} />
                 </ListItemButton>
                 <ListItemButton sx={{ textAlign: 'center', color: 'black' }} >
                     <ListItemText primary="FAQs" sx={{ color: 'black', fontWeight: '700' }} />
                 </ListItemButton>
-                <ListItemButton sx={{ textAlign: 'center', color: 'black' }} onClick={() => navigate("/map")}>
+                <ListItemButton sx={{ textAlign: 'center', color: 'black' }} onClick={() => handleDrawerClose("map")}>
                     <ListItemText primary="Área de cobertura" sx={{ color: 'black', fontWeight: '700' }} />
+                </ListItemButton>
+                <ListItemButton sx={{ textAlign: 'center', color: 'black' }} onClick={() => handleDrawerClose("info")}>
+                    <ListItemText primary="Info" sx={{ color: 'black', fontWeight: '700' }} />
                 </ListItemButton>
             </List>
         </Box>
