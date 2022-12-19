@@ -90,15 +90,16 @@
 
 .pInfo{
     display: flex;
-    width: 70%;
+    width: 100%;
     flex-direction: row;
     justify-content: flex-start;
     align-items: flex-start;
+    margin-top: 100px;
 }
 .pInfo p{
     color: #8B8B8B;
     font-weight: 600;
-    width: 50%;
+    width: 100%;
 }
 .rating{
     width: 70%;
@@ -125,6 +126,18 @@
         font-weight: 600;
         width: 100%;
         font-size: 15px;
+    }
+    .video {
+        width: 90%;
+        min-width: 300px;
+        max-width: 600px;
+        position: relative;
+        margin-top: 50px;
+    }
+    
+    .video img {
+        width: 100%;
+        min-width: 300px;
     }
 }
 @media(max-width: 1236px){
