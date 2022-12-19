@@ -4,21 +4,16 @@
     width: 80%;
     margin: 0 auto;
     margin-top: 100px;
+    max-width: 1000px;
 }
 
 .slick-slide>div {
     margin: 0 10px;
 }
 
-.slick-list {
-    margin: 0 -10px;
+.slick-track{
+    height: 250px !important;
 }
-
-.slick-dots{
-    bottom: 250px !important;
-}
-
-
 .card {
     width: 340px !important;
     height: 295px;
@@ -87,7 +82,6 @@
 .hover-underline-animation {
     position: relative;
     color: white;
-    padding-bottom: 20px;
 }
 
 .hover-underline-animation:after {
@@ -276,4 +270,10 @@ svg {
     align-items: center;
     color: #8B8B8B;
     gap: 5px;
+}
+@media(max-width: 1300px){
+    .slider{
+        width: 70%;
+        max-width: 800px;
+    }
 }

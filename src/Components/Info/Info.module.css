@@ -127,11 +127,16 @@
 }
 
 @media(max-width: 1500px) {
+    .caja1 strong {
+        color: #73D8D1 !important;
+    }
     .cajaDatos h1 {
         color: #636262;
         max-width: 300px;
         min-width: 300px;
         font-size: 35px;
+        gap: 10px;
+        line-height: 100%;
     }
 
     .cajaDatos p {

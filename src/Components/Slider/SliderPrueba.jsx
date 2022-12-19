@@ -12,20 +12,21 @@ export default function SliderPrueba() {
     const [slideIndex, setSlideIndex] = useState(0)
 
     const settings = {
-        dots: true,
+        dots: false,
         infinite: true,
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
         initialSlide: 0,
         responsive: [
+
             {
-                breakpoint: 1024,
+                breakpoint: 1240,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2,
                     infinite: true,
-                    dots: true,
+                    dots: false,
                 },
             },
             {

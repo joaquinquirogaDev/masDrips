@@ -12,6 +12,8 @@ import WeightLoss from './Components/WeightLoss/WeightLoss';
 import Map from './Components/Map/Map.jsx'
 import AboutUs from './Components/AboutUs/AboutUs';
 import Info from './Components/Info/Info';
+import Prevencion from './Components/Prevencion/Prevencion';
+import Testimonios from './Components/Testimonios/Testimonios';
 function App() {
 
   return (
@@ -27,6 +29,8 @@ function App() {
         <Route path='/map' exact element={<Map />} />
         <Route path='/aboutUs' exact element={<AboutUs />} />
         <Route path='/info' exact element={<Info />} />
+        <Route path='/prev' exact element={<Prevencion />} />
+        <Route path='/testi' exact element={<Testimonios />} />
 
       </Routes>
       <Footer/>

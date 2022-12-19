@@ -308,9 +308,6 @@ const Navbar = (props) => {
                 <ListItemButton sx={{ textAlign: 'center', color: 'black' }} onClick={() => handleDrawerClose("map")}>
                     <ListItemText primary="Área de cobertura" sx={{ color: 'black', fontWeight: '700' }} />
                 </ListItemButton>
-                <ListItemButton sx={{ textAlign: 'center', color: 'black' }} onClick={() => handleDrawerClose("info")}>
-                    <ListItemText primary="Info" sx={{ color: 'black', fontWeight: '700' }} />
-                </ListItemButton>
             </List>
         </Box>
     );
