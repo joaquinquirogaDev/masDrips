@@ -10,6 +10,19 @@
 .slick-slide>div {
     margin: 0 10px;
 }
+.slick-arrow{
+    color: red !important;
+    background-color: black !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: auto 0 !important;
+    top: 35% !important;
+    margin: -30px !important;
+    border-radius: 50% !important;
+
+}
+
 
 .slick-track{
     height: 250px !important;
